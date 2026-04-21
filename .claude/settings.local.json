@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npx prisma:*)",
+      "Read(//c/Users/**)",
+      "Bash(find /c/Users/Ruchitha B/Desktop/kefi -type f -name *.md)",
+      "Bash(find /c/Users/Ruchitha B/Desktop/kefi -not -path */node_modules/* -not -path */.next/* -not -path */dist/* -not -path */.git/* -type f)",
+      "Bash(grep -E \"\\\\.\\(md|json|yml|yaml|env\\)$\")",
+      "Bash(gh auth *)"
+    ]
+  }
+}
