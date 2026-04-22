@@ -13,11 +13,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'K E FI',
+  title: 'K E F I',
   description: 'Boutique Store',
-  icons: {
-    icon: '/favicon.ico',
-  },
 };
 
 export default function RootLayout({
