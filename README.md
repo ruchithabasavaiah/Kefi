@@ -15,14 +15,14 @@ Next.js · Express · PostgreSQL · Prisma · Stripe · TypeScript · Tailwind
 Run locally
 bash# Backend
 cd backend && npm install
-# add .env (see .env.example)
+add .env (see .env.example)
 npx prisma migrate deploy
 npx tsx prisma/seed.ts && npx tsx prisma/product.ts
 npm run dev  # :8080
 
 # Frontend
 cd frontend && npm install
-# add .env.local → NEXT_PUBLIC_API_URL=http://localhost:8080
+add .env.local → NEXT_PUBLIC_API_URL=http://localhost:8080
 npm run dev  # :3000
 
 # Stripe webhooks
