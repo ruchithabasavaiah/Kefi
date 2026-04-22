@@ -8,7 +8,9 @@
       "Bash(find /c/Users/Ruchitha B/Desktop/kefi -type f -name *.md)",
       "Bash(find /c/Users/Ruchitha B/Desktop/kefi -not -path */node_modules/* -not -path */.next/* -not -path */dist/* -not -path */.git/* -type f)",
       "Bash(grep -E \"\\\\.\\(md|json|yml|yaml|env\\)$\")",
-      "Bash(gh auth *)"
+      "Bash(gh auth *)",
+      "Bash(convert --version)",
+      "Bash(node generate-favicon.mjs)"
     ]
   }
 }
