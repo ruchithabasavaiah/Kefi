@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'K E F I',
+  title: 'K E FI',
   description: 'Boutique Store',
   icons: {
     icon: '/favicon.ico',
