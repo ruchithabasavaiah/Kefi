@@ -1,9 +1,30 @@
-# KEFI
+#KEFI
+Full-stack e-commerce platform for a boutique clothing store.
+Live → kefi-six.vercel.app
 
-KEFI is a full-stack e-commerce application I built from scratch for a boutique clothing store. The project covers the entire shopping experience — from browsing products and selecting variants to checking out with a real Stripe payment and receiving an order confirmation.
+#What's interesting
 
-On the frontend, I built a Next.js app with a clean, editorial aesthetic inspired by modern fashion brands. It includes a homepage with a full-screen hero, product listing and detail pages with size/color variant selection, a persistent cart, a Stripe-powered checkout flow, and an order history page. The design uses a custom brand identity with a brown and cream colour palette throughout.
+Atomic Prisma checkout transaction — stock validation, inventory decrement, and order creation in a single query. No oversell.
+Two-phase Stripe payment — order created as PENDING, only marked PAID after webhook confirmation. Payment state is never client-reported.
+Stateless JWT auth with role-based middleware. Admin and user routes fully separated.
 
-On the backend, I built a REST API with Express and TypeScript, backed by a PostgreSQL database on Neon and managed with Prisma ORM. It handles user authentication with JWT, atomic inventory management during checkout using Prisma transactions, and Stripe PaymentIntent integration with webhook-driven order confirmation.
 
-The frontend is deployed on Vercel and the backend is deployed on Render, with the database hosted on Neon.
+#Stack
+Next.js · Express · PostgreSQL · Prisma · Stripe · TypeScript · Tailwind
+
+Run locally
+bash# Backend
+cd backend && npm install
+add .env (see .env.example)
+npx prisma migrate deploy
+npx tsx prisma/seed.ts && npx tsx prisma/product.ts
+npm run dev  # :8080
+
+Frontend
+cd frontend && npm install
+add .env.local → NEXT_PUBLIC_API_URL=http://localhost:8080
+npm run dev  # :3000
+
+Stripe webhooks
+stripe listen --forward-to localhost:8080/webhooks/stripe
+Test card: 4242 4242 4242 4242 · any future date · any CVC
