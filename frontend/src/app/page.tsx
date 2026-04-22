@@ -1,6 +1,5 @@
 import { apiGetProducts } from '@/lib/api';
 import HeroSection from '@/components/home/HeroSection';
-import TrustBar from '@/components/home/TrustBar';
 import FeaturedProducts from '@/components/home/FeaturedProducts';
 import { Product } from '@/types';
 
@@ -17,7 +16,6 @@ export default async function HomePage() {
   return (
     <>
       <HeroSection />
-      <TrustBar />
       <FeaturedProducts products={products} />
     </>
   );

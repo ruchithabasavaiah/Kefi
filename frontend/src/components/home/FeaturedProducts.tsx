@@ -15,7 +15,7 @@ export default function FeaturedProducts({ products, loading = false }: Featured
         {/* Header row */}
         <div className="flex items-end justify-between mb-10">
           <div>
-            <p className="eyebrow mb-2">Curated</p>
+            
             <h2 className="text-[32px] font-bold text-[#111111]">Featured Picks</h2>
           </div>
           <Link

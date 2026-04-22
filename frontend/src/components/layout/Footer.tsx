@@ -6,18 +6,24 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
-          <div>
-            <p className="text-[20px] font-bold tracking-widest">KEFI</p>
-            <p className="text-gray-400 text-sm mt-4 max-w-xs leading-relaxed">
-              Curated essentials for the modern lifestyle. Quality craftsmanship, timeless design.
-            </p>
+          <div className="flex flex-col">
+              <p className="text-[20px] font-bold tracking-widest">KEFI</p>
+              <p className="text-gray-400 text-sm mt-4 leading-relaxed text-justify" style={{ maxWidth: '240px' }}>
+                Where simplicity meets intention. Thoughtfully curated pieces made to move with you, from quiet mornings to everything after.
+              </p>
+              <a href="https://instagram.com/kefi_in" target="_blank" rel="noopener noreferrer" style={{ marginTop: '32px' }} className="text-gray-400 hover:text-white transition-colors">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+                </svg>
+              </a>
           </div>
-
           {/* Shop */}
           <div>
             <p className="text-[11px] uppercase tracking-[0.12em] text-[#8C8880] font-medium mb-5">Shop</p>
             <ul className="flex flex-col gap-3">
-              {['New Arrivals', 'Bestsellers', 'Clothing', 'Accessories'].map(item => (
+              {['New Arrivals', 'Bestsellers'].map(item => (
                 <li key={item}>
                   <Link href="/shop" className="text-[16px] text-white hover:text-gray-300 transition-colors">
                     {item}
@@ -31,7 +37,7 @@ export default function Footer() {
           <div>
             <p className="text-[11px] uppercase tracking-[0.12em] text-[#8C8880] font-medium mb-5">Company</p>
             <ul className="flex flex-col gap-3">
-              {['About', 'Sustainability', 'Careers', 'Press'].map(item => (
+              {['About', 'Sustainability'].map(item => (
                 <li key={item}>
                   <Link href="#" className="text-[16px] text-white hover:text-gray-300 transition-colors">
                     {item}

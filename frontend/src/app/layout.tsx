@@ -13,8 +13,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'KEFI — Modern Essentials',
-  description: 'Curated essentials for the modern lifestyle. Quality craftsmanship, timeless design.',
+  title: 'KEFI',
+  description: 'Boutique Store',
 };
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
           <CartProvider>
             {/* Announcement bar */}
             <div className="w-full bg-[#5a3d38] text-[#c9b8a8] text-[11px] font-medium tracking-[0.15em] uppercase text-center py-2.5">
-              Free shipping on orders over $75
+              Free shipping on orders over $45
             </div>
             <Navbar />
             <main className="flex-1">{children}</main>

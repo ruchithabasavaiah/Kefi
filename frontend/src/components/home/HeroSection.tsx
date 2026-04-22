@@ -3,13 +3,13 @@ import Link from 'next/link';
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden" style={{ height: '90vh' }}>
+    <section className="relative w-full overflow-hidden" style={{ height: '100vh' }}>
       <Image
-        src="/hero.jpg"
+        src="/hero2.png"
         alt="KEFI Collection"
         fill
         priority
-        className="object-cover object-top"
+        className="object-cover object-center"
         sizes="100vw"
       />
 
