@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: 'K E F I',
   description: 'Boutique Store',
   icons: {
-    icon: '/favicon.png',
+    icon: '/favicon.ico',
   },
 };
 
